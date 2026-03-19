@@ -40,15 +40,24 @@ if img_file_buffer is not None:
     # run the inference
     prediction = model.predict(data)
     print(prediction)
-    if prediction[0][0]>0.7:
-      st.header('Hola Laura, image = Image.open('OIG5.jpg') st.image(image, width=350) )
-    if prediction[0][1]>0.7:
-      st.header('Adios Laura, con Probabilidad: '+str( prediction[0][1]))
-    if prediction[0][2]>0.7:
-      st.header('Hola Monica, con Probabilidad: '+str( prediction[0][2]))
-    if prediction[0][3]>0.7:
-      st.header('Hola Ana, con Probabilidad: '+str( prediction[0][3]))
-    #if prediction[0][2]>0.5:
-    # st.header('Derecha, con Probabilidad: '+str( prediction[0][2]))
+    if prediction[0][0] > 0.7:
+    st.header('Hola Laura')
+    image = Image.open('laura.jpg')
+    st.image(image, width=350)
+
+    elif prediction[0][1] > 0.7:
+    st.header('Adiós Laura')
+    image = Image.open('adios.jpg')
+    st.image(image, width=350)
+
+    elif prediction[0][2] > 0.7:
+    st.header('Hola Monica')
+    image = Image.open('monica.jpg')
+    st.image(image, width=350)
+
+    elif prediction[0][3] > 0.7:
+    st.header('Hola Ana')
+    image = Image.open('ana.jpg')
+    st.image(image, width=350)
 
 
