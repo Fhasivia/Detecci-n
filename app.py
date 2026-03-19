@@ -41,23 +41,23 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][0] > 0.7:
-    st.header('Hola Laura')
-    image = Image.open('laura.jpg')
-    st.image(image, width=350)
+        st.header('Hola Laura')
+        image = Image.open('laura.jpg')
+        st.image(image, width=350)
 
     elif prediction[0][1] > 0.7:
-    st.header('Adiós Laura')
-    image = Image.open('adios.jpg')
-    st.image(image, width=350)
+        st.header('Adiós Laura')
+        image = Image.open('adios.jpg')
+        st.image(image, width=350)
 
     elif prediction[0][2] > 0.7:
-    st.header('Hola Monica')
-    image = Image.open('monica.jpg')
-    st.image(image, width=350)
+        st.header('Hola Monica')
+        image = Image.open('monica.jpg')
+        st.image(image, width=350)
 
     elif prediction[0][3] > 0.7:
-    st.header('Hola Ana')
-    image = Image.open('ana.jpg')
-    st.image(image, width=350)
+        st.header('Hola Ana')
+        image = Image.open('ana.jpg')
+        st.image(image, width=350)
 
 
