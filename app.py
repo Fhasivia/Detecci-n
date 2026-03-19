@@ -41,7 +41,7 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][0]>0.7:
-      st.header('Hola Laura, con Probabilidad: '+str( prediction[0][0]) )
+      st.header('Hola Laura, image = Image.open('OIG5.jpg') st.image(image, width=350) )
     if prediction[0][1]>0.7:
       st.header('Adios Laura, con Probabilidad: '+str( prediction[0][1]))
     if prediction[0][2]>0.7:
